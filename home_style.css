@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('img/iron.jpg');
+    background-size: 100% 100%;
+}
+
+.font {
+
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+.ht {
+    color: red;
+    font-family: Georgia, serif;
+    padding: 10px;
+}
+
+.m {
+    width: 50%;
+    float: left;
+}
+
+.n {
+    float: right;
+    margin-top: 11%;
+    padding-right: 14%;
+    opacity: 0;
+}
+
+.container {
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgb(94, 89, 89);
+
+    margin-left: 5%;
+    margin-top: 10%;
+    height: 60vh;
+    background-color: rgb(4, 47, 32);
+}
+
+.da {
+    color: white;
+    margin-left: 40px;
+    margin-top: 60px;
+
+}
+
+.n:hover {
+    opacity: 1;
+    margin-left: 6.5%;
+    margin-top: 6.5%;
+    text-shadow: 2px 2px 4px blue;
+}
+
+.container:hover {
+    box-shadow: 1px 1px 5px red, 1px 1px 10px yellow, 1px 1px 5px red;
+}
+.note-list{
+    background-color: lightgreen;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 10px;
+}
+.note-list:hover{
+    background-color: lightgoldenrodyellow;
+}
+
+.note-title{
+    color: rgb(109, 79, 3);
+    text-shadow: 2px 2px 5px wheat;
+    
+}
+nav ul{height:45vh; width:100%;}
+nav ul{overflow:hidden; overflow-y:scroll;}

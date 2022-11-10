@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PHP PostgreSQL Registration & Login Example </title>
+  <meta name="keywords" content="PHP,PostgreSQL,Insert,Login">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="stl.css">
+  
+  <script>
+    function validateForm() {
+      let x = document.forms["log-form"]["email"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }let y = document.forms["log-form"]["pwd"].value;
+  if (y == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  if(y.length<5){
+    alert("Password must have 5 charecters")
+    return false;
+  }else{
+    ValidateEmail(x)
+  }
+}
+    function ValidateEmail(inputText)
+    {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(inputText.value.match(mailformat))
+      {
+          alert("Valid email address!");
+          document.form1.text1.focus();
+          return true;
+      }
+      else
+      {
+        alert("You have entered an invalid email address!");
+        document.form1.text1.focus();
+        return false;
+      }
+      }
+
+    </script>
+</head>
+
+<body>
+  <div class="imn">
+    <h4 class='tooltiptext'>IRON MAN</h4>
+  </div>
+  <div class="pkt">
+
+  </div>
+  <div class="site-name">
+    Note Saver
+  </div>
+  <div class="container">
+    <h2 class="lgh">Login Here </h2>
+
+    <form name="log-form" method="post" action="/login.php" onsubmit="return validateForm()">
+      <div class="form-group">
+        <div class="ab">
+          <table align="center">
+            <tr>
+              <th style="padding-left: 140px"><label for="email">Email:</label></th>
+              <td colspan="2"><input type="email" class="form-control" id="email" placeholder="Enter email"
+                  name="email"></td>
+            </tr>
+
+            <br>
+
+            <tr>
+              <th style="padding-left: 113px"><label for="pwd">Password:</label></th>
+              <td colspan="2"><input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                  name="pwd"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="but">
+        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+      </div>
+      <br>
+      <span class="signin-link">Don't have an account? Click here to <a href="reg.html">Register</a></span>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>

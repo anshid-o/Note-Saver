@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.logo:hover{
+  filter: saturate(7);
+}
+body{
+    background-image: url("img/marvel.jpg");
+    
+    background-size:cover ;
+    height: 75vh;
+}
+.site-name{
+    color: red;
+
+    width: 20%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 40%;
+    padding-left: 2%;
+    margin-top: 0;
+    padding-top: 10vh;
+    text-shadow:  3px 3px 10px rgb(80, 11, 11);
+    font-size: 300%;
+    font-weight: bold;
+    color: red;
+    animation-name: note;
+    animation-fill-mode: forwards;
+    position: fixed;
+    animation-duration: 3s;
+}
+@keyframes note {
+    0% {top: 280px;left: -100px;font-size: 600%;width: 40%;
+        font-weight: bolder;}
+        40% {top: 280;left: -100px;font-size: 600%;width: 40%;
+            font-weight: bolder;}
+    to {top: 0px;left: 0;
+        font-size: 300%;
+        font-weight: bold;width: 20%;}
+  }
+  .site-name:hover{
+    color: rgb(194, 4, 4);
+    text-shadow:  3px 3px 10px rgb(32, 170, 244);
+  }
+.container{
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 25%;
+   margin-top: 30vh;
+    width: 50%;
+    height: 60vh;
+    background-color: palegreen;
+    animation-name: example;
+  animation-duration: 3s;
+    opacity: 0.95;
+    align-content: space-around;
+    
+}
+@keyframes example {
+    0% {background-color: blue;opacity: 0;}
+    80% {background-color: aquamarine;opacity: 0;}
+    100% {background-color: palegreen;opacity: 0.95;}
+  }
+.container:hover{
+    box-shadow:  3px 3px 10px rgb(80, 11, 11);
+    opacity: 1.0;
+}
+.lgh{
+    animation-name: example2;
+  animation-duration: 5s;
+    padding: 8px;
+}
+@keyframes example2 {
+    from {font-weight: 600;
+        color: brown;
+        text-decoration: wavy;
+        box-shadow: inset;}
+    to {color: black;}
+  }
+.lgh:hover{
+    font-weight: 600;
+    color: brown;
+    text-decoration: wavy;
+    box-shadow: inset;
+}
+table{
+    width: 90%;
+}
+th, td {
+    padding: 15px;
+  }
+
+/* label{
+    text-decoration: underline solid rgb(51, 3, 96) 12%;
+    float: left;
+} */
+.form-group{
+    
+    margin-left: 35px; 
+    width: 90%;
+    border-radius: 12px;
+    padding: 5vh;
+    background-color: bisque;
+    text-decoration: solid black;
+}
+.form-group:hover{
+    
+    box-shadow:  0 0 10px rgb(13, 56, 42);
+}
+
+input{
+    color: brown;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /* border-bottom: 2px solid red; */
+}
+
+.form-group input:focus{
+    outline: none;
+    
+    box-shadow: 3px 3px 10px rgb(168, 92, 92);
+}
+
+.but input:hover{
+    color: aliceblue;
+    background-color: rgb(31, 7, 53);
+    
+}
+input[type=submit] {
+    padding:5px 15px; 
+    background:rgb(51, 3, 96); 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px; 
+}
+
+
+.imn {
+    position: relative;
+    margin-right: 1%;
+    margin-top: 3%;
+    width: 280px;
+    height: 150px;
+    opacity: 0;
+    animation-name: example3;
+  animation-duration: 3s;
+  animation-play-state: paused;
+    border-radius: 5px 2px;
+    float: right;
+  }
+  .tooltiptext{
+    padding-left: 190px;
+    letter-spacing: .5px;
+    margin-top: 12vh;
+    color:gold;
+    
+    font-family: fantasy;
+    text-shadow: 2px 2px 5px red;
+
+  }
+  .imn:hover {
+    animation-play-state: running;
+  }
+
+
+@keyframes example3 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

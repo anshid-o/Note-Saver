@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PHP PostgreSQL Registration & Login Example </title>
+    <meta name="keywords" content="PHP,PostgreSQL,Insert,Login">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="stl.css">
+    <script>
+        function validateForm() {
+            let n = document.forms["log-form"]["name"].value;
+      if (n == "") {
+        alert("Name must be filled out");
+        return false;
+      }
+            let x = document.forms["log-form"]["email"].value;
+      if (x == "") {
+        alert("Email must be filled out");
+        return false;
+      } let m = document.forms["log-form"]["mobno"].value;
+      if (m == "") {
+        alert("Mobile number must be filled out");
+        return false;
+      }
+      if(m.length<10){
+        alert("Mobile number must have 10 numbers")
+        return false;
+      }
+      let y = document.forms["log-form"]["pwd"].value;
+      if (y == "") {
+        alert("Password must be filled out");
+        return false;
+      }
+      if(y.length<5){
+        alert("Password must have 5 charecters")
+        return false;
+      }else{
+        ValidateEmail(x)
+      }
+    }
+        function ValidateEmail(inputText)
+        {
+          var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          if(inputText.value.match(mailformat))
+          {
+              alert("Valid email address!");
+              document.form1.text1.focus();
+              return true;
+          }
+          else
+          {
+            alert("You have entered an invalid email address!");
+            document.form1.text1.focus();
+            return false;
+          }
+          }
+    
+        </script>
+</head>
+
+<body>
+    <div class="site-name" style="margin-top: 2%;">Note Saver
+    </div>
+    <div class="container" style="height: 80vh;">
+        <h2 class="lgh">Register Here </h2>
+        <form name="log-form" action="register.php" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <th style="padding-left: 100px"><label for="name">Name:</label></th>
+                        <td colspan="2"><input type="text" class="form-control" id="name" placeholder="Enter name" name="name"
+                            requuired></td>
+                    </tr>
+
+                    <tr>
+                        <th style="padding-left: 100px"><label for="email">Email:</label></th>
+                        <td colspan="2"><input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </td></tr>
+
+                    <tr>
+                        <th style="padding-left: 100px"><label for="pwd">Mobile No:</label></th>
+                        <td colspan="2"><input type="number" class="form-control" maxlength="10" id="mobileno"
+                            placeholder="Enter Mobile Number" name="mobno"></td>
+                    </tr>
+
+                    <tr>
+                        <th style="padding-left: 100px"><label for="pwd">Password:</label></th>
+                        <td colspan="2"><input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                        </td></tr>
+                </table>
+            </div>
+            <div class="but">
+                <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                <br><br>
+                <span class="signin-link">Already have an account? Click here to <a href="lg.html">Login</a></span>
+
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
